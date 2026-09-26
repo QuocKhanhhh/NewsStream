@@ -1,0 +1,30 @@
+{
+  "name": "minio-news-sink",
+  "config": {
+    "connector.class": "io.confluent.connect.s3.S3SinkConnector",
+    "tasks.max": "1",
+    "topics": "newsstream.newsdb.news",
+    "key.converter": "org.apache.kafka.connect.converters.ByteArrayConverter",
+    "key.ignore": "true",
+    "value.converter": "io.confluent.connect.avro.AvroConverter",
+    "value.converter.schema.registry.url": "http://schema-registry:8081",
+    "value.converter.value.subject.name.strategy": "io.confluent.kafka.serializers.subject.RecordNameStrategy",
+    "s3.bucket.name": "news-raw",
+    "s3.region": "us-east-1",
+    "store.url": "http://minio:9000",
+    "aws.access.key.id": "minioadmin",
+    "aws.secret.access.key": "minioadmin123",
+    "s3.path.style.access": "true",
+    "storage.class": "io.confluent.connect.s3.storage.S3Storage",
+    "format.class": "io.confluent.connect.s3.format.json.JsonFormat",
+    "partitioner.class": "io.confluent.connect.storage.partitioner.TimeBasedPartitioner",
+    "path.format": "'year'=YYYY/'month'=MM/'day'=dd/'hour'=HH",
+    "partition.duration.ms": "3600000",
+    "locale": "en",
+    "timezone": "UTC",
+    "flush.size": "1",
+    "rotate.interval.ms": "10000",
+    "schema.compatibility": "NONE",
+    "consumer.override.auto.offset.reset": "latest"
+  }
+}

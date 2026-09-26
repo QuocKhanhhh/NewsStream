@@ -1,0 +1,86 @@
+# Environment files and local secrets
+.env
+.env.*
+!.env.example
+*.local
+*.secret
+*.secrets
+*.pem
+*.key
+*.crt
+credentials.json
+secrets.json
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+MANIFEST
+
+# Python virtual environments
+.venv/
+venv/
+env/
+ENV/
+.direnv/
+
+# Test and coverage output
+.pytest_cache/
+.tox/
+.nox/
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+.hypothesis/
+
+# Application and service logs
+*.log
+logs/
+airflow/logs/
+
+# Local Docker/service data
+postgres_data/
+kafka_data/
+mongo_data/
+elasticsearch_data/
+minio_data/
+data/
+
+# Local Docker Compose overrides
+docker-compose.override.yml
+docker-compose.override.yaml
+
+# Editors and operating systems
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Local tooling and temporary files
+.cache/
+.tmp/
+tmp/
+*.tmp
+*.temp

@@ -1,0 +1,10 @@
+apache-airflow
+requests
+beautifulsoup4
+lxml
+atoma
+kafka-python
+redis
+pymongo
+pytest
+pytest-cov

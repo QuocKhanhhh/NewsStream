@@ -1,0 +1,21 @@
+{
+  "index_patterns": ["newsstream.newsdb.news*"] ,
+  "priority": 100,
+  "template": {
+    "settings": {
+      "number_of_replicas": 0
+    },
+    "mappings": {
+      "dynamic": true,
+      "properties": {
+        "title": {"type": "text"},
+        "description": {"type": "text"},
+        "url": {"type": "keyword"},
+        "language": {"type": "keyword"},
+        "source": {"type": "keyword"},
+        "published_at": {"type": "date"},
+        "scraped_at": {"type": "date"}
+      }
+    }
+  }
+}
